@@ -21,8 +21,8 @@ class Screenshat < Formula
 
   test do
     mkdir_p "output"
-    shell_output("${bin}/screenshat --url https://google.com --min-width 320 --max-width 400 --output-gif --output-dir output")
+    shell_output("${bin}/screenshat --url https://google.com --min-width 320 --max-width 400 " \
+                 "--output-gif --output-dir output")
     assert_predicate testpath/"output.txt", :exist?
   end
 end
-
